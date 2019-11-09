@@ -1,0 +1,115 @@
+body {
+    font-family: Castledown, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    max-width: 1280px;
+    height: 5172px;
+    grid-template-areas: "nav nav"
+        "search search"
+        "category category"
+        "empty empty"
+        "left right"
+        "topSearch topSearch"
+        "commercial commercial"
+        "about about"
+        "footer footer";
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 60px 60px 45px 3.6% 71.7% 8.2% 4.8% 4.3% 2%;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #3c3241; ;
+}
+
+.search {
+    grid-area: search;
+    background-color: cornflowerblue;
+}
+
+.category {
+    grid-area: category;
+    background-color: darkgoldenrod;
+}
+
+.empty {
+    grid-area: empty;
+    background-color: darkmagenta;
+}
+
+.left {
+    grid-area: left;
+    background-color: darkslategrey;
+}
+
+.right {
+    grid-area: right;
+    background-color: firebrick;
+}
+
+.topSearch {
+    grid-area: topSearch;
+    background-color: gold;
+}
+
+.commercial {
+    grid-area: commercial;
+    background-color: indigo;
+}
+
+.about {
+    grid-area: about;
+    background-color: khaki;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lawngreen;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.barLeft,
+.barRight {
+    display: flex;
+    align-items: center;
+}
+
+/* nav left side */
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.logoImg {
+    width: 35px;
+    height: 35px;
+}
+
+.logoTxt {
+    width: auto;
+    max-width: 105px;
+    height: 19px;
+    padding: 0 8px;
+}
+
+/* nav right side */
+
+.login {
+    color: white;
+    text-decoration: none;
+}
