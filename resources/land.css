@@ -1,87 +1,41 @@
 body {
-    font-family: Castledown, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-family: C, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.4;
     margin: 0;
 }
 
-.container {
-    display: grid;
-    height: 5112px;
-    grid-template-areas: "nav nav"
-        "category category"
-        "empty empty"
-        "left right"
-        "topSearch topSearch"
-        "commercial commercial"
-        "about about"
-        "footer footer";
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 120px 45px 3.6% 71.7% 8.2% 4.8% 4.3% 2%;
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
 }
 
-nav {
-    grid-area: nav;
-}
 
-.category {
-    grid-area: category;
-    background-color: darkgoldenrod;
-}
-
-.empty {
-    grid-area: empty;
-    background-color: darkmagenta;
-}
-
-.left {
-    grid-area: left;
-    background-color: darkslategrey;
-}
-
-.right {
-    grid-area: right;
-    background-color: firebrick;
-}
-
-.topSearch {
-    grid-area: topSearch;
-    background-color: gold;
-}
-
-.commercial {
-    grid-area: commercial;
-    background-color: indigo;
-}
-
-.about {
-    grid-area: about;
-    background-color: khaki;
-}
-
-footer {
-    grid-area: footer;
-    background-color: lawngreen;
-}
 
 /* navbar */
 
 nav {
-    background-color: #3c3241; ;
+    background-color: #3c3241;
+    ;
 }
 
 .firstBar {
     height: 60px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 8px;
 }
 
 .barLeft,
 .barRight {
     display: flex;
     align-items: center;
-    padding: 0 8px;
 }
 
 /* nav left side */
@@ -127,11 +81,11 @@ span.dot {
     max-height: 10px;
 }
 
-.button {
+.barRight .button {
     border: 1px solid #e77171;
 }
 
-.fa-thumb-tack {
+.barRight .fa-thumb-tack {
     margin: 0px 12px 0 4px;
 }
 
@@ -148,8 +102,9 @@ form {
     justify-content: center;
     align-items: center;
     height: 60px;
-    margin: 0 8%;
-}  
+    max-width: 1024px;
+    margin: 0 auto;
+}
 
 #item,
 #location {
@@ -158,8 +113,6 @@ form {
     border: 1px solid #d8d6d9;
     border-radius: 2px;
     box-sizing: border-box;
-    color: inherit;
-    font-family: inherit;
     font-size: 16px;
     line-height: 20px;
     height: 44px;
@@ -175,10 +128,307 @@ form {
 }
 
 .go {
-    margin-left: 8px;
+    margin: 8px;
     padding: 10px 12px;
     background-color: #e77171;
     height: 44px;
     color: white;
     border-style: unset;
+}
+
+/* category bar */
+
+.category {
+    width: 100%;
+    background-color: #d1d1d1;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 1px;
+}
+
+.category button {
+    background-color: white;
+    font-family: inherit;
+    border: none;
+    padding: 12px;
+}
+
+.category h4,
+.category p {
+    font-weight: 400;
+}
+
+.boldTit {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.smallDes {
+    font-size: 14px;
+    color: #B1ADB3;
+    letter-spacing: .3px;
+    ;
+}
+
+/* empty */
+
+.empty {
+    background-color: #d1d1d1;
+    height: 200px;
+}
+
+/* left */
+
+.catalog {
+    display: grid;
+    grid-template-columns: 73.7% 26.3%;
+}
+
+.left {
+    background-color: #ececec;
+    padding: 24px 10px 24px 2px;
+}
+
+.pick {
+    margin: 0 0 18px 8px;
+    font-size: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.card {
+    background-color: white;
+    border-radius: 2px;
+}
+
+.surround {
+    padding: 6px;
+    ;
+}
+
+.cardTitle {
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.imageFit {
+    padding-top: 100%;
+    position: relative;
+}
+
+.imageBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.image {
+    height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.contTitle {
+    height: 70.4px;
+    padding: 8px;
+}
+
+.cardTitle {
+    height: 44px;
+    margin: 0;
+}
+
+.cardTitle h3 {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+}
+
+.price {
+    height: 22.4px;
+    margin-top: 4px;
+}
+
+.price h3 {
+    font-size: 18px;
+    color: #52a744;
+    margin: 0;
+}
+
+/* auto banner */
+
+.banner {
+    padding: 6px;
+}
+
+.banTitle {
+    align-self: center;
+}
+
+.form {
+    background-color: white;
+    padding: 24px;
+}
+
+.contForm h1 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+.contForm h4 {
+    text-align: left;
+    color: #635b67;
+    font-size: 16px;
+}
+
+.contForm p {
+    text-align: left;
+    color: #635b67;
+    font-size: 14px;
+}
+
+.contForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carIcon {
+    color: #e77171;
+    ;
+}
+
+.inputReg {
+    background-color: #fdec33;
+    background-image: url(https://www.gumtree.com/assets/gb-vrn-bg.a69cae79e7f1c01bc3f7e9c06e34d61c.png);
+    background-repeat: no-repeat;
+    border: 1px solid #d8d6d9;
+    border-radius: 2px;
+    font-size: 16px;
+    height: 42px;
+    text-indent: 2.5em;
+    padding: 0;
+    background-position: -2px;
+    background-size: auto 44px;
+}
+
+.oneInput .button {
+    background-color: #e77171;
+    color: white;
+    font-size: 16px;
+    padding: 13px 59.6px;
+}
+
+.oneInput .fa-thumb-tack {
+    color: white;
+}
+
+.oneInput {
+    padding: 12px;
+}
+
+.twoInput {
+    display: flex;
+    align-items: center;
+}
+
+/* right */
+
+.right {
+    background-color: #ececec;
+}
+
+/* topsearch */
+.topSearch {
+    padding: 24px 8px;
+}
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: white;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    padding: 0 0 18px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.fa-caret-down {
+    color: black;
+    position: relative;
+    top: 0.15rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topSearch a {
+    color: #307f9c;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.contentSearch {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.contentLocation {
+    display: none;
+}
+
+.contentLocation a {
+    cursor: pointer;
+    padding: 8px;
+}
+
+.contentLocation ul {
+    margin: 0;
+    text-align: center;
+}
+
+.contentLocation li {
+   display: inline-block;
+   overflow: hidden;
+}
+
+.contentLocation li::after {
+    content: "|";
+    font-weight: 700;
+    color: #b1adb3;
+}
+
+.contentLocation h4 {
+    margin-bottom: 21px;
+}
+
+/* footer */
+
+.commercial {
+    height: 250px;
+    background-color: #00485e;
+    background-image: url(https://www.gumtree.com/assets/phone.56ea69a02a5005cd9049b59208a18e63.png);
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: right -25% top 6px;
 }
