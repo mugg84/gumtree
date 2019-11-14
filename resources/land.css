@@ -350,13 +350,8 @@ form {
     background-color: #ececec;
 }
 
-/* topsearch */
-.topSearch {
-    padding: 24px 8px;
-}
+/* foldable parts */
 
-
-/* Style the button that is used to open and close the collapsible content */
 .collapsible {
     background-color: white;
     cursor: pointer;
@@ -367,6 +362,16 @@ form {
     padding: 0 0 18px 0;
     font-size: 15px;
     font-weight: 600;
+}
+
+.contentSearch {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* topsearch */
+.topSearch {
+    padding: 24px 8px;
 }
 
 .fa-caret-down {
@@ -387,11 +392,6 @@ ul {
     font-weight: 100;
 }
 
-/* Style the collapsible content. Note: hidden by default */
-.contentSearch {
-    display: none;
-    grid-template-columns: repeat(4, 1fr);
-}
 
 .contentLocation {
     display: none;
@@ -408,8 +408,8 @@ ul {
 }
 
 .contentLocation li {
-   display: inline-block;
-   overflow: hidden;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .contentLocation li::after {
@@ -430,5 +430,128 @@ ul {
     background-image: url(https://www.gumtree.com/assets/phone.56ea69a02a5005cd9049b59208a18e63.png);
     background-repeat: no-repeat;
     position: relative;
-    background-position: right -25% top 6px;
+    background-position: right -25% top 25px;
+    background-size: 800px auto;
+    padding: 32px 24px;
+    box-sizing: border-box;
+}
+
+.bannerContent {
+    color: white;
+}
+
+.hide-visually {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.bannerContent,
+.store {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.banOne {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.banTwo {
+    font-size: 26px;
+}
+
+.bannerStore {
+    margin-top: 24px;
+}
+
+.banOne,
+.banTwo,
+.bannerStore {
+    margin-right: 600px;
+    display: inline-block;
+    width: 320px;
+}
+
+/* lower part footer */
+
+.footLink {
+    display: flex;
+    width: 100%;
+    padding: 24px 8px;
+    box-sizing: border-box;
+}
+
+.lowLink {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.lowLink h4 {
+    color: #b1adb3;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.lowLink a {
+    color: #f0ece6;
+    text-decoration: none;
+    padding: 4px 0;
+}
+
+/* divider */
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #635b67;
+    margin: 16px 0;
+}
+
+/* bottom footer */
+
+.footerSoc {
+    padding: 0 8px 24px 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerSoc h4 {
+    color: #b1adb3;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.social {
+    background-color: #635b67;
+    border: #635b67;
+    padding: 4px 8px;
+    display: inline-block;
+    margin: 4px;
+}
+
+.socialList {
+    margin-bottom: 24px;
+}
+
+.copyRight a,
+.copyR,
+.e
+{
+    color: #b1adb3;
+}
+
+.copyRight {
+    display: flex;
 }
